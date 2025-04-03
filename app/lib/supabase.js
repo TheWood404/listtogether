@@ -20,10 +20,10 @@ export const signUp = async (email, password) => {
 };
 
 // Fonction pour générer un token aléatoire
-const generateToken = () => {
-  return Math.random().toString(36).substring(2, 15) + 
-         Math.random().toString(36).substring(2, 15);
-};
+//const generateToken = () => {
+ // return Math.random().toString(36).substring(2, 15) + 
+    //     Math.random().toString(36).substring(2, 15);
+//};
 
 export const signIn = async (email, password) => {
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -285,7 +285,7 @@ export const getTaskCreators = async (taskIds) => {
 export const getTasks = async (listId) => {
   try {
     // Vérifier que l'utilisateur est connecté
-    const { data: userData, error: userError } = await supabase.auth.getUser();
+    //const { data: userData, error: userError } = await supabase.auth.getUser();
     
     if (userError) {
       throw userError;
@@ -439,17 +439,17 @@ export const subscribeToList = (listId, callback) => {
 //Supprimer une tache
 export const deleteTask = async (taskId) => {
   try {
-    const { data: userData, error: userError } = await supabase.auth.getUser();
+    //const { data: userData, error: userError } = await supabase.auth.getUser();
     
     if (userError) {
       throw userError;
     }
     
     // Supprimer la tâche
-    const { data, error } = await supabase
-      .from('tasks')
-      .delete()
-      .eq('id', taskId);
+    //const { data, error } = await supabase
+   //   .from('tasks')
+    //  .delete()
+    //  .eq('id', taskId);
     
     if (error) {
       throw error;
@@ -770,12 +770,12 @@ export async function checkUserExists(email) {
         
         // Méthode alternative: utiliser signIn pour vérifier si l'utilisateur existe
         // Cette méthode est moins précise mais peut fonctionner comme solution temporaire
-        const { data: authData, error: authError } = await supabase.auth.signInWithOtp({
-          email: email,
-          options: {
-            shouldCreateUser: false, // Ne pas créer d'utilisateur s'il n'existe pas
-          }
-        });
+        //const { data: authData, error: authError } = await supabase.auth.signInWithOtp({
+        //  email: email,
+        //  options: {
+        //    shouldCreateUser: false, // Ne pas créer d'utilisateur s'il n'existe pas
+         // }
+        //});
         
         // Si pas d'erreur, l'utilisateur existe
         if (!authError) {

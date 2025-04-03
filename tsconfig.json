@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/auth/login/page.jsx", "app/lib/supabase.js", "app/list/[listId]/page.jsx", "app/context/UserContext.js", "app/components/lists/ShareListModal.jsx", "app/components/lists/NotificationBell.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/auth/login/page.jsx", "app/lib/supabase.js", "app/list/[listId]/page.jsx", "app/context/UserContext.js", "app/components/lists/ShareListModal.jsx", "app/components/lists/NotificationBell.jsx", "app/page.jsx"],
   "exclude": ["node_modules"]
 }

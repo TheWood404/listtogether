@@ -112,7 +112,7 @@ export const handleWebhook = async (event) => {
         if (subscriptionId) {
           // Récupérer les détails de l'abonnement
           const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-          const planId = subscription.items.data[0].price.product;
+          //const planId = subscription.items.data[0].price.product;
           
           // Déterminer le plan en fonction du produit Stripe
           const { data: plans } = await supabase
