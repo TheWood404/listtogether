@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+    // Configurer explicitement les redirections pour les routes dynamiques
+    async rewrites() {
+      return [
+        {
+          source: '/list/:listId',
+          destination: '/list/[listId]',
+        },
+      ];
+    },
 };
 
 export default nextConfig;

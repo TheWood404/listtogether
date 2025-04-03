@@ -1,3 +1,5 @@
+//app/list/[listId]/page.jsx
+// 
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -22,6 +24,19 @@ export default function ListPage() {
   const params = useParams();
   const router = useRouter();
   const listId = params.listId;
+
+  // Ajouter ces logs au début de votre composant, juste après les définitions des états
+useEffect(() => {
+  console.log('Environment:', process.env.NODE_ENV);
+  console.log('Params:', params);
+  console.log('ListId:', listId);
+  
+  // Vérifier si nous avons un ID de liste valide
+  if (!listId) {
+    console.error('ListId missing in URL parameters');
+  }
+}, [params, listId]);
+
 
   // Récupérer les détails de la liste
   useEffect(() => {
