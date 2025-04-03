@@ -285,7 +285,7 @@ export const getTaskCreators = async (taskIds) => {
 export const getTasks = async (listId) => {
   try {
     // Vérifier que l'utilisateur est connecté
-    //const { data: userData, error: userError } = await supabase.auth.getUser();
+    const { data: userData, error: userError } = await supabase.auth.getUser();
     
     if (userError) {
       throw userError;
