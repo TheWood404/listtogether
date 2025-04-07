@@ -1,4 +1,4 @@
-//app/list/[listId]/page.jsx
+//app/lists/[listId]/page.jsx
 // 
 'use client';
 
@@ -10,7 +10,7 @@ import ShareListModal from '@/app/components/lists/ShareListModal';
 import DeleteListButton from '@/app/components/lists/DeleteListButton';
 import { useUser } from '@/app/context/UserContext';
 
-export default function ListPage() {
+export default function ListPage() {  
   const [list, setList] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

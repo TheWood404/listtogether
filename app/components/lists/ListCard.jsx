@@ -1,3 +1,5 @@
+//app/components/lists/ListCard.jsx
+
 'use client';
 
 import Link from 'next/link';
@@ -28,13 +30,13 @@ export default function ListCard({ list }) {
 
   return (
     <Link 
-      href={`/list/${list.id}`}
+      href={`/lists/${list.id}`}
       className="block bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all p-5 border border-gray-200 hover:border-gray-300 transform hover:scale-[1.02] w-full max-w-md mx-auto md:max-w-lg"
       data-card-id={cardId}
     >
       <h3 className="text-base md:text-lg font-bold text-gray-900 truncate tracking-wide">{list.title}</h3>
       
-      {list.description && (
+      {list.description && ( 
         <p className="mt-2 text-sm md:text-base text-gray-700 line-clamp-2 italic">{list.description}</p>
       )}
       

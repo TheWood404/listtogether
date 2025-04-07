@@ -297,7 +297,7 @@ export default function DashboardPage() {
           <div className="md:grid md:grid-cols-3 md:gap-8">
             {/* Main content - ListGrid */}
             <div className="md:col-span-2 mb-8 md:mb-0">
-              <ListGrid />
+              <ListGrid /> 
             </div>
             
             {/* Sidebar */}
@@ -326,7 +326,7 @@ export default function DashboardPage() {
                     </svg>
                     Modifier mon profil
                   </button>
-                </div>
+                </div> 
               </div>
               
               {/* Activité récente */}

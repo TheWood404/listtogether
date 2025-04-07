@@ -129,7 +129,7 @@ export default function ListGrid() {
             Créer une liste
           </button>
         </div>
-      ) : (
+      ) : ( 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {lists.map((list) => (
             <div key={`${list.id}-${list.role || 'member'}`} className="transform transition-all hover:scale-[1.02]">
